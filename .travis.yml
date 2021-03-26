@@ -8,6 +8,7 @@ env:
   - AWS_URL=037368072271.dkr.ecr.ap-south-1.amazonaws.com
 services:
 - docker
+
 script:
 - echo "No tests!"
 after_success:
