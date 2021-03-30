@@ -4,7 +4,7 @@ env:
   global:
   - LIVE_SERVICE=ff
   - LIVE_CLUSTER_NAME=newtask
-  - LIVE_APP_NAME=johnn
+  - LIVE_APP_NAME=john
   - AWS_URL=037368072271.dkr.ecr.ap-south-1.amazonaws.com
 services:
 - docker
