@@ -5,7 +5,11 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     if [ "$TRAVIS_BRANCH" == "master" ] ; then
         # Build and push
         docker --version
-        pip install --user awscli
+        #pip install --user awscli
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	unzip awscliv2.zip
+	sudo ./aws/install
+	aws --version
         export PATH=$PATH:$HOME/.local/bin
         eval $(aws ecr get-login --no-include-email --region ap-south-1)
 	docker login -u AWS -p $(aws ecr get-login-password --region ap-south-1) 037368072271.dkr.ecr.ap-south-1.amazonaws.com
