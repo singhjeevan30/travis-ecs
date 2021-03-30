@@ -18,7 +18,9 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         #docker tag "$LIVE_APP_NAME:latest" "$AWS_URL/$LIVE_APP_NAME:latest"
         #docker push "$AWS_URL/$LIVE_APP_NAME:$TRAVIS_COMMIT"
         #docker push "$AWS_URL/$LIVE_APP_NAME:latest"
-	docker tag john 037368072271.dkr.ecr.ap-south-1.amazonaws.com/john
-	docker push 037368072271.dkr.ecr.ap-south-1.amazonaws.com/john
+	#docker tag john 037368072271.dkr.ecr.ap-south-1.amazonaws.com/john
+	#docker push 037368072271.dkr.ecr.ap-south-1.amazonaws.com/john
+	docker tag john:latest public.ecr.aws/u2z3j2j0/john:latest
+	docker push public.ecr.aws/u2z3j2j0/john:latest
     fi
 fi
