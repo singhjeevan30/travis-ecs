@@ -8,7 +8,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         pip install --user awscli
         export PATH=$PATH:$HOME/.local/bin
         eval $(aws ecr get-login --no-include-email --region ap-south-1)
-        docker build -t "$LIVE_APP_NAME:latest" .
+        docker build -t "$LIVE_APP_NAME" .
         #docker tag "$LIVE_APP_NAME:latest" "$AWS_URL/$LIVE_APP_NAME:$TRAVIS_COMMIT"
         #docker tag "$LIVE_APP_NAME:latest" "$AWS_URL/$LIVE_APP_NAME:latest"
         #docker push "$AWS_URL/$LIVE_APP_NAME:$TRAVIS_COMMIT"
