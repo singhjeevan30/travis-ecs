@@ -6,6 +6,7 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         # Build and push
         docker --version
         pip install --user awscli
+	aws ecr create-repository --repository-name john/johndoe
 	#curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 	#unzip awscliv2.zip
 	#sudo ./aws/install
