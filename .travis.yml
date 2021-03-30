@@ -2,8 +2,8 @@ sudo: required
 language: bash
 env:
   global:
-  - LIVE_SERVICE=ff
-  - LIVE_CLUSTER_NAME=newtask
+  - LIVE_SERVICE=minionservice
+  - LIVE_CLUSTER_NAME=jeevab
   - LIVE_APP_NAME=john
   - AWS_URL=037368072271.dkr.ecr.ap-south-1.amazonaws.com
 services:
