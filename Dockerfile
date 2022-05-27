@@ -1,3 +1,3 @@
-FROM nginx:latest
+FROM nginx:stable
 Expose 8080
 CMD ["echo", "Hello nginxx!"]
